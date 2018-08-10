@@ -1,0 +1,7 @@
+D:\Project\VSProject\ServerFramework\Common\bin\Debug\Common.exe.config
+D:\Project\VSProject\ServerFramework\Common\bin\Debug\Common.exe
+D:\Project\VSProject\ServerFramework\Common\bin\Debug\Common.pdb
+D:\Project\VSProject\ServerFramework\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\Project\VSProject\ServerFramework\Common\obj\Debug\Common.exe
+D:\Project\VSProject\ServerFramework\Common\obj\Debug\Common.pdb
+D:\Project\VSProject\ServerFramework\Common\obj\Debug\Common.csprojAssemblyReference.cache
