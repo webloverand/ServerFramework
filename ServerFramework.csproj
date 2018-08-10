@@ -45,15 +45,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BaseController.cs" />
+    <Compile Include="Controller\ControllerManage.cs" />
+    <Compile Include="Controller\DefaultController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Model\UserTempData.cs" />
+    <Compile Include="Model\UserData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servers\Client.cs" />
+    <Compile Include="Servers\MessageHandle.cs" />
     <Compile Include="Servers\Server.cs" />
     <Compile Include="Tool\MySqlHelper.cs" />
+    <Compile Include="Tool\Singleton\ISingleton.cs" />
+    <Compile Include="Tool\Singleton\Singleton.cs" />
+    <Compile Include="Tool\Singleton\SingletonCreator.cs" />
+    <Compile Include="Tool\Singleton\SingletonProperty.cs" />
+    <Compile Include="DAO\UserDataDAO.cs" />
+    <Compile Include="Tool\Sys.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{0536CFA0-5D65-4FF3-A155-1212ADC9E44B}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

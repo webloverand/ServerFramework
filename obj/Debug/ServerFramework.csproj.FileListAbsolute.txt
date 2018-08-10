@@ -7,3 +7,6 @@ D:\Project\VSProject\ServerFramework\ServerFramework\bin\Debug\MySql.Data.dll
 D:\Project\VSProject\ServerFramework\ServerFramework\obj\Debug\ServerFramework.csproj.CopyComplete
 D:\Project\VSProject\ServerFramework\ServerFramework\obj\Debug\ServerFramework.exe
 D:\Project\VSProject\ServerFramework\ServerFramework\obj\Debug\ServerFramework.pdb
+D:\Project\VSProject\ServerFramework\ServerFramework\bin\Debug\Common.exe
+D:\Project\VSProject\ServerFramework\ServerFramework\bin\Debug\Common.pdb
+D:\Project\VSProject\ServerFramework\ServerFramework\bin\Debug\Common.exe.config

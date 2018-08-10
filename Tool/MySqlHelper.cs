@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using MySql.Data.MySqlClient;
+using ServerFramework.Tool.Singleton;
 
 namespace ServerFramework.Tool
 {
-    class MySQLHelper
+    class MySQLHelper : Singleton<MySQLHelper>
     {
         public const string ConnectionString = "datasource=127.0.0.1;port=3306;database=servicefw;user=root;pwd=134855";
-        public MySqlConnection SqlConn;
 
         public MySQLHelper()
         {
@@ -15,40 +16,34 @@ namespace ServerFramework.Tool
         /// <summary>
         /// 连接
         /// </summary>
-        public void Connect()
+        public MySqlConnection Connect()
         {
-            SqlConn = new MySqlConnection(ConnectionString);
+            MySqlConnection SqlConn = new MySqlConnection(ConnectionString);
             try
             {
                 SqlConn.Open();
+                return SqlConn;
             }
             catch(Exception e)
             {
-                Console.WriteLine("Connect数据库的时候出现异常:" + e);
+                Console.WriteLine("[MySQLHelper]Connect:" + e.Message);
+                return null;
             }
         }
-
-        public void DisConnect()
+        //关闭数据库连接
+        public void CloseConnection(MySqlConnection SqlConn)
         {
             if (SqlConn != null)
                 SqlConn.Close();
             else
             {
-                Console.WriteLine("DisConnect MySqlConnection为空");
+                Console.WriteLine("MySqlConnection不能为空");
             }
         }
-        //查询调用
-        public MySqlDataReader ExecuteReader(string sqlC)
+        //判定安全字符串
+        public bool IsSafeStr(string str)
         {
-            MySqlCommand cmd = new MySqlCommand(sqlC, SqlConn);
-            return cmd.ExecuteReader();
+            return !Regex.IsMatch(str, @"[-|;|,|\/|\(|\)|\[|\]|\}|\{|%|@|\*|!|\']");
         }
-        //插入/删除/更新等无返回值命令调用
-        public void ExecuteNonQuery(string sqlC)
-        {
-            MySqlCommand cmd = new MySqlCommand(sqlC, SqlConn);
-            cmd.ExecuteNonQuery();
-        }
-        
     }
 }

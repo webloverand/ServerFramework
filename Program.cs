@@ -1,5 +1,6 @@
 ﻿
 using MySql.Data.MySqlClient;
+using ServerFramework.Servers;
 using ServerFramework.Tool;
 using System;
 
@@ -9,14 +10,18 @@ namespace ServerFramework
     {
         static void Main(string[] args)
         {
-            MySQLHelper mySqlHelper = new MySQLHelper();
-            MySqlDataReader dataReader = mySqlHelper.ExecuteReader("select * from servertest");
-            while (dataReader.Read())
-            {
-                Console.WriteLine(dataReader.GetString("ID") + " " + dataReader.GetString("Name"));
-            }
-            Console.ReadKey();
 
+            //MySqlDataReader dataReader = MySQLHelper.ExecuteReader(MySQLHelper.Connect(), "select * from servertest");
+            //while (dataReader.Read())
+            //{
+            //    Console.WriteLine(dataReader.GetString("ID") + " " + dataReader.GetString("Name"));
+            //}
+            //Console.ReadKey();
+
+            Server server = new Server("192.168.31.68", 6688);
+            server.Start();
+
+            Console.ReadKey();
         }
     }
 }
