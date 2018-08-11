@@ -1,5 +1,5 @@
 ﻿using ClientFramework.Tool.Singleton;
-using Common;
+using Protocol;
 using System;
 using System.Collections.Generic;
 

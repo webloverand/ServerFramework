@@ -42,12 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionCode.cs" />
+    <Compile Include="Protocol\ActionCode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestCode.cs" />
-    <Compile Include="ReasonCode.cs" />
-    <Compile Include="ReturnCode.cs" />
+    <Compile Include="Protocol\RequestCode.cs" />
+    <Compile Include="Protocol\ReasonCode.cs" />
+    <Compile Include="Protocol\ReturnCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

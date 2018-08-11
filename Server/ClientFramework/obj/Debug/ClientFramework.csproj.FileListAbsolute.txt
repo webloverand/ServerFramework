@@ -9,3 +9,7 @@ D:\Project\VSProject\ServerFramework\ClientFramework\bin\Debug\Common.exe
 D:\Project\VSProject\ServerFramework\ClientFramework\bin\Debug\Common.pdb
 D:\Project\VSProject\ServerFramework\ClientFramework\bin\Debug\Common.exe.config
 D:\Project\VSProject\ServerFramework\ClientFramework\obj\Debug\ClientFramework.csproj.CopyComplete
+D:\Project\GitProject\ServerFramework\Server\ClientFramework\obj\Debug\ClientFramework.csprojAssemblyReference.cache
+D:\Project\GitProject\ServerFramework\Server\ClientFramework\obj\Debug\ClientFramework.csproj.CoreCompileInputs.cache
+D:\Project\GitProject\ServerFramework\Server\ClientFramework\obj\Debug\ClientFramework.exe
+D:\Project\GitProject\ServerFramework\Server\ClientFramework\obj\Debug\ClientFramework.pdb

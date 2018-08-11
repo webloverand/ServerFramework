@@ -1,4 +1,4 @@
-﻿namespace Common
+﻿namespace Protocol
 {
     public enum ReturnCode
     {
